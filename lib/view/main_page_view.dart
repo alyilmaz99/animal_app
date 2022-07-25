@@ -28,22 +28,21 @@ class _MainPageState extends State<MainPage> {
                 Container(
                   alignment: Alignment.topLeft,
                   margin: EdgeInsets.only(
-                      top: screenWidth / 15, left: screenWidth / 15 , bottom: 0),
+                      top: screenWidth / 15, left: screenWidth / 15, bottom: 0),
                   child: const HomeButton(),
                 ),
               ],
             ),
             SizedBox(
-              width: screenWidth/2.7,
+              width: screenWidth / 2.7,
               child: Image.asset(
                 'assets/images/bitmojisemih.png',
-                height: screenWidth/3.5,
+                height: screenWidth / 3.5,
                 alignment: Alignment.topLeft,
               ),
             ),
             Container(
               alignment: Alignment.center,
-              
               width: screenWidth / 2.7,
               height: screenWidth / 2.7,
               decoration: BoxDecoration(
@@ -55,15 +54,15 @@ class _MainPageState extends State<MainPage> {
             ),
             Spacer(),
             SizedBox(
-              width: screenWidth/2.5,
+              width: screenWidth / 2.5,
               child: Image.asset(
                 'assets/images/bitmojicat.png',
-                height: screenWidth/5,
+                height: screenWidth / 5,
                 alignment: Alignment.topRight,
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(bottom: screenHeight / 10),
+              padding: EdgeInsets.only(bottom: screenHeight / 5),
               child: Container(
                 width: screenWidth / 2.7,
                 height: screenWidth / 2.7,
