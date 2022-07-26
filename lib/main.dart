@@ -1,3 +1,4 @@
+import 'package:animal_app/view/animal_page_view.dart';
 import 'package:animal_app/view/main_page_view.dart';
 import 'package:animal_app/view/profile_page_view.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: ProfilePage(),
+      home: AnimalPage(),
     );
   }
 }

@@ -13,4 +13,7 @@ class TextConst {
   static const String textFieldJob = "Meslek Giriniz";
   static const String profileAddress = "Kayıtlı Adresleri Düzenle";
   static const String profileEdit = "Ödeme Bilgilerini Düzenle";
+  static const String animalSpec = "Hayvan Türünü Giriniz";
+  static const String animalGender = "Cinsini Giriniz";
+  static const String animalAge = "Yaşını Giriniz";
 }

@@ -1,23 +1,20 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:animal_app/const/color_const.dart';
 import 'package:animal_app/const/text_const.dart';
 import 'package:animal_app/widget/edit_profile.dart';
 import 'package:animal_app/widget/home_button.dart';
 import 'package:animal_app/widget/save_button.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class ProfilePage extends StatefulWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+class AnimalPage extends StatefulWidget {
+  const AnimalPage({Key? key}) : super(key: key);
 
   @override
-  State<ProfilePage> createState() => _ProfilePageState();
+  State<AnimalPage> createState() => _AnimalPageState();
 }
 
-class _ProfilePageState extends State<ProfilePage> {
+class _AnimalPageState extends State<AnimalPage> {
   final TextEditingController _controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -66,7 +63,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           color: Colors.grey.shade200,
                           borderRadius: BorderRadius.circular(25),
                           image: const DecorationImage(
-                            image: AssetImage('assets/images/images.jpg'),
+                            image: AssetImage('assets/images/dog.png'),
                             fit: BoxFit.fill,
                           )),
                     ),
@@ -127,7 +124,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               border: InputBorder.none,
                               hintText: TextConst.animalSpec,
                               prefixIcon: Icon(
-                                Icons.arrow_circle_right_outlined,
+                                Icons.sort_by_alpha,
                               ),
                               /*suffixIcon: IconButton(
                                   icon: Icon(Icons.close),
@@ -162,7 +159,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               border: InputBorder.none,
                               hintText: TextConst.animalGender,
                               prefixIcon: Icon(
-                                Icons.phone,
+                                Icons.male,
                               ),
                               /*suffixIcon: IconButton(
                                   icon: Icon(Icons.close),
@@ -197,77 +194,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               border: InputBorder.none,
                               hintText: TextConst.animalAge,
                               prefixIcon: Icon(
-                                Icons.mail,
-                              ),
-                              /*suffixIcon: IconButton(
-                                  icon: Icon(Icons.close),
-                                  onPressed: () => _controller.clear(),
-                                )*/
-                            ),
-                            textInputAction: TextInputAction.done,
-                            keyboardType: TextInputType.name,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                      child: Container(
-                        margin: EdgeInsets.only(top: screenHeight / 30),
-                        height: screenHeight / 20,
-                        decoration: BoxDecoration(
-                            color: ColorConst.homeButtonBackground,
-                            border: Border.all(
-                                color: ColorConst.homeButtonBackground),
-                            borderRadius: BorderRadius.circular(12)),
-                        child: const Padding(
-                          padding: EdgeInsets.only(left: 1.0),
-                          child: TextField(
-                            //controller: _controller,
-                            decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: TextConst.textFieldAge,
-                              prefixIcon: Icon(
                                 Icons.calendar_month,
-                              ),
-                              /*suffixIcon: IconButton(
-                                  icon: Icon(Icons.close),
-                                  onPressed: () => _controller.clear(),
-                                )*/
-                            ),
-                            textInputAction: TextInputAction.done,
-                            keyboardType: TextInputType.name,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                      child: Container(
-                        margin: EdgeInsets.only(top: screenHeight / 30),
-                        height: screenHeight / 20,
-                        decoration: BoxDecoration(
-                            color: ColorConst.homeButtonBackground,
-                            border: Border.all(
-                                color: ColorConst.homeButtonBackground),
-                            borderRadius: BorderRadius.circular(12)),
-                        child: const Padding(
-                          padding: EdgeInsets.only(left: 1.0),
-                          child: TextField(
-                            //controller: _controller,
-                            decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: TextConst.textFieldJob,
-                              prefixIcon: Icon(
-                                Icons.join_full,
                               ),
                               /*suffixIcon: IconButton(
                                   icon: Icon(Icons.close),
@@ -291,17 +218,17 @@ class _ProfilePageState extends State<ProfilePage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     // ignore: prefer_const_literals_to_create_immutables
                     children: [
-                      Text(
+                      const Text(
                         TextConst.profileAddress,
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: ColorConst.homeButtonBackground,
                           shape: BoxShape.circle,
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.settings,
                           size: 25,
                         ),
@@ -318,16 +245,17 @@ class _ProfilePageState extends State<ProfilePage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     // ignore: prefer_const_literals_to_create_immutables
                     children: [
-                      Text(
+                      const Text(
                         TextConst.profileEdit,
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: ColorConst.homeButtonBackground,
                           shape: BoxShape.circle,
                         ),
+                        // ignore: prefer_const_constructors
                         child: Icon(
                           Icons.settings,
                           size: 25,
